@@ -1,6 +1,6 @@
 <?php
 	/*提取Bing网站的信息*/
-	$str=file_get_contents('http://www.bing.com/HPImageArchive.aspx?idx=0&n=1');
+	$str=file_get_contents('https://www.bing.com/HPImageArchive.aspx?idx=0&n=1');
 	/*匹配字符串中的url超链接，成功返回 1 ，否则返回 0 */
 	if(preg_match("/<url>(.+?)<\/url>/ies",$str,$matches)){
 		$imgurl='http://www.bing.com'.$matches[1];

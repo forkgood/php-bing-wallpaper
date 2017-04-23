@@ -1,7 +1,7 @@
 <?php  
-    $str = file_get_contents('http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
+    $str = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
     $data = json_decode($str);
-    $imgurl = "http://www.bing.com".$data -> {"images"}[0] -> {"url"};
+    $imgurl = "https://www.bing.com".$data -> {"images"}[0] -> {"url"};
     if($imgurl){
         $img = imagecreatefromjpeg($imgurl);
         header('Expires: ' . gmdate('D, d M Y H:i:s', strtotime(date('Y-m-d', strtotime('+1 day')))) . ' GMT'); 

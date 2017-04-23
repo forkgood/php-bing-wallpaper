@@ -4,7 +4,7 @@
 	error_reporting(0);
 	ob_end_clean();
 	ob_start();
-	$OBingJson=file_get_contents('http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
+	$OBingJson=file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
 	$BingJson=json_decode($OBingJson,true);
 
 	/*遍历数组*/
